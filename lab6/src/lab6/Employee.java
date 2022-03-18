@@ -1,6 +1,7 @@
 package lab6;
 import java.util.*;
 public class Employee {
+    // Initializing variables
     private String firstName;
     private String lastName;
     private int age;
@@ -8,29 +9,27 @@ public class Employee {
 
     public Employee() {
         // Get user input
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Enter the first name: ");
-        String FN=scan.nextLine();
-        System.out.println("Enter the last name:");
-        String LN=scan.nextLine();
-        System.out.println("Enter age: ");
-        int Age=scan.nextInt();
-        System.out.println("Enter salary: ");
-        double Salary=scan.nextDouble();
-        scan.close();
-        /**
-         * 
-         * Continue code here to ask for the first name, last name, age, and salary, IN THAT ORDER
-         */
-        firstName=FN;
-        lastName=LN;
-        age=Age;
-        salary=Salary;
+    	
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Please input the employee's first name:");
+        firstName = scanner.nextLine();
+        
+        System.out.print("Please input the employee's last name:");
+        lastName = scanner.nextLine();
+        
+        System.out.print("Please input the employee's age:");
+        age = scanner.nextInt();
 
-    }
+        System.out.print("Please input the employee's monthly salary:");
+        salary = scanner.nextDouble();
+        
+        }
 
-    public String toString() {
+    public void printInfo() {
         // insert logic for toString method
-    	return firstName+" "+lastName+" "+age+" "+salary;
+    	
+		System.out.println("Employee information: " + firstName + " " +
+    	lastName + ", " + age + ", " + salary);
     }
 }
